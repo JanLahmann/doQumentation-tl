@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.2cee2077.js" defer="defer"></script>
-<script src="/assets/js/main.18ddea3c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6174438f.js" defer="defer"></script>
+<script src="/assets/js/main.36dc4cab.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/calibration-jobs" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,51 +28,81 @@
 <p>Upang matiyak ang tuloy-tuloy na performance, madalas na minomonitor ang mga IBM® quantum computer upang subaybayan ang mga parameter na maaaring lumihis sa paglipas ng panahon, magpatakbo ng mga calibration kung kinakailangan, at magsagawa ng araw-araw na benchmarking. Inilalarawan ng pahinang ito ang tatlong proseso — monitoring, calibrating, at benchmarking — na magkasamang nagtatrabaho upang matiyak na ang fleet ng mga IBM quantum computer ay mananatiling matatag, mahuhulaan, at available sa mga user hangga&#x27;t maaari.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="monitoring">Monitoring<a href="#monitoring" class="hash-link" aria-label="Direktang link sa Monitoring" title="Direktang link sa Monitoring" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="parameter-monitoring">Parameter monitoring<a href="#parameter-monitoring" class="hash-link" aria-label="Direktang link sa Parameter monitoring" title="Direktang link sa Parameter monitoring" translate="no">​</a></h3>
-<p>Ang mga maikling parameter monitoring job ay isinasagawa nang humigit-kumulang isang beses sa isang oras, awtomatikong nagpapalitan sa pagitan ng mga user job, gamit ang buong Qiskit Runtime software stack. Ang mga resulta ng mga job na ito ay sinusuri upang matukoy kung may parameter nang nagsimulang lumihis sa mga katanggap-tanggap na saklaw, na mainam na nakakakuha ng mga isyu bago pa man maging sapat na malaki upang maapektuhan ang performance sa kapansin-pansing antas.</p>
+<p>Ang mga maikling parameter monitoring job ay isinasagawa nang humigit-kumulang isang beses sa isang oras, awtomatikong nagpapalitan sa pagitan ng mga user job, gamit ang buong IBM Quantum Compute Service software stack. Ang mga resulta ng mga job na ito ay sinusuri upang matukoy kung may parameter nang nagsimulang lumihis sa mga katanggap-tanggap na saklaw, na mainam na nakakakuha ng mga isyu bago pa man maging sapat na malaki upang maapektuhan ang performance sa kapansin-pansing antas.</p>
 <p>Kasama sa ilan sa mga parameter na minomonitor ang sumusunod:</p>
 <ul>
-<li class="">Mga readout angle, amplitude, at discriminator threshold, na tinitiyak ang tumpak na pagkilala sa estado, mababang leakage at matatag na operasyon. Kasama dito ang mga operational na parameter ng aming mga quantum limited amplifier.</li>
-<li class="">Mga single- at two-qubit gate na operasyon, na nagpapatunay na kumikilos ang mga ito ayon sa inaasahan upang mapanatili ang mga tamang rotation angle at mabawasan ang mga phase at amplitude error.</li>
-<li class="">Mga palatandaan ng aktibidad ng TLS.</li>
+<li class="">
+<p>Mga readout angle, amplitude, at discriminator threshold, na tinitiyak ang tumpak na pagkilala sa estado, mababang leakage at matatag na operasyon. Kasama dito ang mga operational na parameter ng aming mga quantum limited amplifier.</p>
+</li>
+<li class="">
+<p>Mga single- at two-qubit gate na operasyon, na nagpapatunay na kumikilos ang mga ito ayon sa inaasahan upang mapanatili ang mga tamang rotation angle at mabawasan ang mga phase at amplitude error.</p>
+</li>
+<li class="">
+<p>Mga palatandaan ng aktibidad ng TLS.</p>
+</li>
 </ul>
 <p>Kung ang mga resulta ng mga monitoring job na ito ay nagpapahiwatig ng katamtamang paglihis mula sa inaasahang performance ng mga ito, ang mga angkop na calibration job ay inilulunsad. Kung ang matinding aktibidad ng TLS ay natukoy, ang calibration na diskarte para sa mga gate na nauugnay sa mga apektadong qubit ay maaaring awtomatikong mabago (at maaaring kabilang ang pagtigil ng mga calibration) hanggang sa mababa muli ang aktibidad ng TLS sa katanggap-tanggap na antas.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="holistic-monitoring">Holistic monitoring<a href="#holistic-monitoring" class="hash-link" aria-label="Direktang link sa Holistic monitoring" title="Direktang link sa Holistic monitoring" translate="no">​</a></h3>
-<p>Bukod sa mga job na minomonitor ang mga indibidwal na parameter ay ang mga job na minomonitor ang performance ng quantum computer nang mas holistic, tulad ng mga pagsubok na tinitingnan ang fidelity ng mga nabuong Bell state, pati na rin ang mga pagsubok ng mga fractional gate at dynamic circuit sa mga quantum computer na sumusuporta sa mga feature na iyon. Ang layunin ng mga pagsubok na ito, na tumatakbo rin sa pamamagitan ng buong Qiskit Runtime stack na nagpapalitan sa mga user job, ay mahusay na ma-validate ang pangkalahatang gawi ng hardware at software. Kung ang mga pagsubok na ito ay nakakakita ng malaking pagbaba sa performance, ang quantum computer ay awtomatikong mag-i-pause ng job queue hanggang sa malutas ang isyu, na tinitiyak na hindi tatakbo ang mga user job hanggang sa gumagana na muli ang device ayon sa inaasahan.</p>
+<p>Bukod sa mga job na minomonitor ang mga indibidwal na parameter ay ang mga job na minomonitor ang performance ng quantum computer nang mas holistic, tulad ng mga pagsubok na tinitingnan ang fidelity ng mga nabuong Bell state, pati na rin ang mga pagsubok ng mga fractional gate at dynamic circuit sa mga quantum computer na sumusuporta sa mga feature na iyon. Ang layunin ng mga pagsubok na ito, na tumatakbo rin sa pamamagitan ng buong Quantum Compute stack na nagpapalitan sa mga user job, ay mahusay na ma-validate ang pangkalahatang gawi ng hardware at software. Kung ang mga pagsubok na ito ay nakakakita ng malaking pagbaba sa performance, ang quantum computer ay awtomatikong mag-i-pause ng job queue hanggang sa malutas ang isyu, na tinitiyak na hindi tatakbo ang mga user job hanggang sa gumagana na muli ang device ayon sa inaasahan.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="calibrating">Calibrating<a href="#calibrating" class="hash-link" aria-label="Direktang link sa Calibrating" title="Direktang link sa Calibrating" translate="no">​</a></h2>
 <p>Ang mga calibration ay nati-trigger tuwing ang mga monitoring job ay nagpapahiwatig na ang mga parameter tulad ng mga pulse amplitude o angle ay lumihis mula sa kanilang mga ideal na halaga. Tumatakbo ang mga ito sa buong araw sa pagitan ng mga user job, at samakatuwid ay walang itinakdang oras ng simula at katapusan ng mga calibration. Ang mga ito ay tumatakbo lamang sa mga qubit/gate kung saan ang parameter monitoring ay nagtukoy ng mga partikular na isyu, kasama ang anumang qubit na kinakailangang tumakbo nang sabay-sabay ayon sa mga partikular na batching rule. Sa mga Heron QPU, ang kabuuang oras na ginugugol sa mga calibration ay karaniwang wala pang dalawang oras bawat araw.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="single-qubit-operations">Mga single-qubit na operasyon<a href="#single-qubit-operations" class="hash-link" aria-label="Direktang link sa Mga single-qubit na operasyon" title="Direktang link sa Mga single-qubit na operasyon" translate="no">​</a></h3>
 <p>Tinitiyak ng mga calibration na ito ang tumpak na pagpapatupad ng mga single-qubit gate: sx, x, rx (fractional). Inaayos namin ang:</p>
 <ul>
-<li class="">Mga qubit frequency</li>
-<li class="">Mga pulse amplitude at phase</li>
+<li class="">
+<p>Mga qubit frequency</p>
+</li>
+<li class="">
+<p>Mga pulse amplitude at phase</p>
+</li>
 </ul>
 <p>Ang mga calibration na ito ay binabatch sa mga apektadong qubit at isinasagawa nang sabay-sabay kung naaangkop, na may mga batching na diskarte na naka-tailor sa bawat uri ng calibration.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="two-qubit-operations">Mga two-qubit na operasyon<a href="#two-qubit-operations" class="hash-link" aria-label="Direktang link sa Mga two-qubit na operasyon" title="Direktang link sa Mga two-qubit na operasyon" translate="no">​</a></h3>
 <ul>
-<li class="">Mga CZ at RZZ gate amplitude at phase (para sa mga Heron at Nighthawk processor)</li>
-<li class="">Mga ECR gate amplitude at phase (para sa mga Eagle processor)</li>
+<li class="">
+<p>Mga CZ at RZZ gate amplitude at phase (para sa mga Heron at Nighthawk processor)</p>
+</li>
+<li class="">
+<p>Mga ECR gate amplitude at phase (para sa mga Eagle processor)</p>
+</li>
 </ul>
 <p>Ang mga calibration na ito ay pinapatakbo sa mga batch ng mga qubit na hindi pinakamalapit na kapitbahay upang mabawasan ang crosstalk.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="readout">Readout<a href="#readout" class="hash-link" aria-label="Direktang link sa Readout" title="Direktang link sa Readout" translate="no">​</a></h3>
 <ul>
-<li class="">Mga readout pulse angle</li>
-<li class="">Mga measurement discrimination parameter</li>
+<li class="">
+<p>Mga readout pulse angle</p>
+</li>
+<li class="">
+<p>Mga measurement discrimination parameter</p>
+</li>
 </ul>
 <p>Ang mga calibration na ito ay pinapatakbo nang sabay-sabay sa mga qubit na nangangailangan ng calibration.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-calibrations-are-scheduled">Paano naka-schedule ang mga calibration<a href="#how-calibrations-are-scheduled" class="hash-link" aria-label="Direktang link sa Paano naka-schedule ang mga calibration" title="Direktang link sa Paano naka-schedule ang mga calibration" translate="no">​</a></h3>
 <ul>
-<li class="">Ang isang calibration job ay hindi maaaring tumakbo nang sabay habang tumatakbo ang isang job o session.</li>
-<li class="">Samakatuwid, sa panahon ng mahahabang session, ang quantum computer ay maaaring makaranas ng nabawasang epektibong katatagan dahil sa naantala o hindi madalas na muling pag-calibrate.</li>
-<li class="">Ang dalawang job na sabay na na-submit ay maaaring tumakbo sa ilalim ng iba&#x27;t ibang calibration set, depende sa timing.</li>
+<li class="">
+<p>Ang isang calibration job ay hindi maaaring tumakbo nang sabay habang tumatakbo ang isang job o session.</p>
+</li>
+<li class="">
+<p>Samakatuwid, sa panahon ng mahahabang session, ang quantum computer ay maaaring makaranas ng nabawasang epektibong katatagan dahil sa naantala o hindi madalas na muling pag-calibrate.</p>
+</li>
+<li class="">
+<p>Ang dalawang job na sabay na na-submit ay maaaring tumakbo sa ilalim ng iba&#x27;t ibang calibration set, depende sa timing.</p>
+</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="benchmarking">Benchmarking<a href="#benchmarking" class="hash-link" aria-label="Direktang link sa Benchmarking" title="Direktang link sa Benchmarking" translate="no">​</a></h2>
 <p>Ang araw-araw na benchmarking ay nagbibigay ng komprehensibong pananaw sa performance ng quantum computer at gumagawa ng mga metric na ipinapadala sa mga user sa pamamagitan ng Qiskit. Tinutulungan nito ang mga user na pumili ng mga qubit, i-optimize ang mga compilation, at mas mahulaan ang inaasahang circuit performance. Maaari mong tingnan ang mga iniulat na numero sa pamamagitan ng programa o sa pahina ng <a href="https://quantum.cloud.ibm.com/computers" target="_blank" rel="noopener noreferrer" class="">Compute resources</a> (i-click ang anumang QPU upang buksan ang detalyadong information card nito). Hanapin ang higit pang detalye tungkol sa bawat metric sa <a class="" href="/guides/qpu-information">dokumentasyon</a>.</p>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Device drift</div><div class="admonitionContent_BuS1"><p>Ang epekto ng device drift (hardware performance na bumababa sa paglipas ng panahon) ay nakasalalay sa maraming salik, tulad ng kung kailan huling pinatakbo ang mga calibration, ang partikular na eksperimentong isinagawa, anumang aktibidad ng TLS, at iba pa. Kung ang isang partikular na workload ay napakasensitibo sa mga error na halaga ng device parameter, maaari kang magsagawa ng real-time device parameter benchmarking sa pamamagitan ng pagsunod sa <a class="" href="/tutorials/real-time-benchmarking-for-qubit-selection">tutorial na ito</a> sa IBM Quantum Learning.</p></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="single-qubit-performance">Single-qubit performance<a href="#single-qubit-performance" class="hash-link" aria-label="Direktang link sa Single-qubit performance" title="Direktang link sa Single-qubit performance" translate="no">​</a></h3>
 <ul>
-<li class=""><a class="" href="/guides/qpu-information#median-sx-error">Randomized benchmarking</a> (RB) sa mga batch na grupo</li>
-<li class="">Mga coherence time para sa <a class="" href="/guides/qpu-information#t1"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a> at <a class="" href="/guides/qpu-information#t2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">T_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a></li>
-<li class=""><a class="" href="/guides/qpu-information#median-readout-error">Mga measurement-fidelity metric</a></li>
+<li class="">
+<p><a class="" href="/guides/qpu-information#median-sx-error">Randomized benchmarking</a> (RB) sa mga batch na grupo</p>
+</li>
+<li class="">
+<p>Mga coherence time para sa <a class="" href="/guides/qpu-information#t1"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a> at <a class="" href="/guides/qpu-information#t2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">T_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a></p>
+</li>
+<li class="">
+<p><a class="" href="/guides/qpu-information#median-readout-error">Mga measurement-fidelity metric</a></p>
+</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="two-qubit-performance">Two-qubit performance<a href="#two-qubit-performance" class="hash-link" aria-label="Direktang link sa Two-qubit performance" title="Direktang link sa Two-qubit performance" translate="no">​</a></h3>
 <ul>

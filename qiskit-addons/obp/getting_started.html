@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.2cee2077.js" defer="defer"></script>
-<script src="/assets/js/main.18ddea3c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6174438f.js" defer="defer"></script>
+<script src="/assets/js/main.36dc4cab.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,27 +29,37 @@
 <p>Isang paraan upang payagan ang mas malalim na backpropagation sa circuit, habang pinipigilan ang operator sa paglaki nang masyadong malaki, ay ang pag-truncate ng mga term na may maliliit na coefficient, sa halip na idagdag ang mga ito sa operator. Ang pag-truncate ng mga term ay maaaring magresulta sa mas kaunting mga quantum circuit na isasagawa, ngunit ang paggawa nito ay nagreresulta sa ilang error sa final na expectation value calculation na proporsyonal sa magnitude ng mga coefficient ng mga truncated na term.
 Sa tutorial na ito ay magpapatupad tayo ng isang <a href="https://quantum.cloud.ibm.com/docs/guides/serverless#qiskit-patterns-with-quantum-serverless" target="_blank" rel="noopener noreferrer" class="">Qiskit pattern</a> para sa pag-simulate ng quantum dynamics ng isang Heisenberg spin chain gamit ang operator backpropagation:</p>
 <ul>
-<li class=""><strong>Hakbang 1: I-map sa quantum problem</strong>
+<li class="">
+<p><strong>Hakbang 1: I-map sa quantum problem</strong></p>
 <ul>
 <li class="">I-map ang time-evolved Hamiltonian sa isang quantum circuit</li>
 </ul>
 </li>
-<li class=""><strong>Hakbang 2: I-optimize ang problema</strong>
+<li class="">
+<p><strong>Hakbang 2: I-optimize ang problema</strong></p>
 <ul>
-<li class="">I-slice ang circuit</li>
+<li class="">
+<p>I-slice ang circuit</p>
+</li>
 <li class="">
 <font color="#0F62FE">I-backpropagate ang mga slice mula sa circuit patungo sa isang Pauli observable</font>
 </li>
-<li class="">Pagsamahin ang natitirang mga slice sa isang single circuit</li>
-<li class="">I-transpile ang circuit para sa backend</li>
+<li class="">
+<p>Pagsamahin ang natitirang mga slice sa isang single circuit</p>
+</li>
+<li class="">
+<p>I-transpile ang circuit para sa backend</p>
+</li>
 </ul>
 </li>
-<li class=""><strong>Hakbang 3: Isagawa ang mga eksperimento</strong>
+<li class="">
+<p><strong>Hakbang 3: Isagawa ang mga eksperimento</strong></p>
 <ul>
 <li class="">Kalkulahin ang expectation value gamit ang nabawasan na circuit at expanded observable na may <a href="https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator" target="_blank" rel="noopener noreferrer" class="">StatevectorEstimator</a> para sa pagiging simple sa notebook na ito</li>
 </ul>
 </li>
-<li class=""><strong>Hakbang 4: I-reconstruct ang mga resulta</strong>
+<li class="">
+<p><strong>Hakbang 4: I-reconstruct ang mga resulta</strong></p>
 <ul>
 <li class="">N.A.</li>
 </ul>
@@ -124,6 +134,7 @@ circuit.draw(&quot;mpl&quot;, style=&quot;iqp&quot;, scale=0.6)
 ![Quantum circuit diagram](/img/qiskit-addons/obp/01-getting-started/output_2.png)
 
 ## Hakbang 2: I-optimize ang problema \{#step-2-optimize-the-problem}
+
 ### Gumawa ng circuit slices na i-backpropagate \{#create-circuit-slices-to-backpropagate}
 
 Tandaan, ang ``backpropagate`` function ay magba-backpropagate ng buong circuit slices nang sabay-sabay, kaya ang pagpili kung paano i-slice ay maaaring magkaroon ng epekto sa kung gaano kahusay gumaganap ang backpropagation para sa ibinigay na problema. Dito, gagrupo natin ang mga gate ng parehong type sa mga slice gamit ang [slice_by_gate_types](https://qiskit.github.io/qiskit-addon-utils/stubs/qiskit_addon_utils.slicing.slice_by_gate_types.html) function.
@@ -266,6 +277,7 @@ bp_obs_trunc_isa = bp_obs_trunc.apply_layout(bp_circuit_trunc_isa.layout)
 ```
 
 ## Hakbang 3: Isagawa ang quantum experiments \{#step-3-execute-quantum-experiments}
+
 ### Kalkulahin ang expectation value \{#calculate-expectation-value}
 
 Sa wakas, maaari na nating patakbuhin ang mga backpropagated experiment at ihambing sila sa buong eksperimento gamit ang noiseless [StatevectorEstimator](https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator). Makikita natin na ang backpropagated expectation value na walang truncation ay katumbas ng exact value sa loob ng mga limitasyon ng numerical precision.

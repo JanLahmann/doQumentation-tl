@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.2cee2077.js" defer="defer"></script>
-<script src="/assets/js/main.18ddea3c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6174438f.js" defer="defer"></script>
+<script src="/assets/js/main.36dc4cab.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,18 +28,10 @@
 Ang numero ng bersyon ay binubuo ng tatlong pangunahing bahagi: ang major, minor, at
 patch na bersyon. Halimbawa, sa numero ng bersyon na <code>X.Y.Z</code>, ang <code>X</code> ay ang major na bersyon,
 ang <code>Y</code> ay ang minor na bersyon, at ang <code>Z</code> ay ang patch na bersyon.</p>
-<p>Ang mga pagbabagong nakaka-apekto sa API ay nakalaan para sa mga major na release ng bersyon. Ang <strong>pinakamaikling</strong>
-panahon sa pagitan ng mga major na release ng bersyon ay isang taon. Ang mga minor na bersyon ay nagpapakilala ng
-mga bagong feature at bug fix nang hindi nasisira ang compatibility ng API, at
-pana-panahon (kasalukuyang bawat tatlong buwan) ay inilalathala para <strong>lamang</strong> sa
-kasalukuyang major na bersyon. Ang mga patch na bersyon ay nagbibigay ng mga ayos para sa mga bug na natukoy sa
-pinakabagong minor na bersyon ng bawat aktibong sinusuportahang release series (iyon ay, ang
-major na bersyon). Sumusuporta kami ng hanggang dalawang release series sa isang pagkakataon, na nangyayari
-lamang sa panahon ng overlap kasunod ng isang bagong major na release ng bersyon,
-na inilarawan nang mas detalyado sa ibaba.</p>
+<p>Ang mga pagbabagong nakaka-apekto sa API ay nakalaan para sa mga major na release ng bersyon. Ang <strong>pinakamaikling</strong> panahon sa pagitan ng mga major na release ng bersyon ay isang taon. Ang mga minor na bersyon ay nagpapakilala ng mga bagong feature at bug fix nang hindi nasisira ang compatibility ng API, at pana-panahon (kasalukuyang, humigit-kumulang bawat tatlong buwan) ay inilalathala para <strong>lamang</strong> sa kasalukuyang major na bersyon. Ang mga patch na bersyon ay nagbibigay ng mga ayos para sa mga bug na natukoy sa pinakabagong minor na bersyon ng bawat aktibong sinusuportahang release series (iyon ay, ang major na bersyon). Sumusuporta kami ng hanggang dalawang release series sa isang pagkakataon, na nangyayari lamang sa panahon ng overlap kasunod ng isang bagong major na release ng bersyon, na inilarawan nang mas detalyado sa ibaba.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="release-schedule">Iskedyul ng release<a href="#release-schedule" class="hash-link" aria-label="Direktang link sa Iskedyul ng release" title="Direktang link sa Iskedyul ng release" translate="no">​</a></h2>
-<p>Ang isang tentative na iskedyul ng release ay kasama sa ibaba:</p>
-<p><img decoding="async" loading="lazy" alt="Tentative na iskedyul ng release ng Qiskit" src="/assets/images/release_schedule-1773ed2741facc7656f68e0351ed74ec.avif" width="1048" height="360" class="img_ev3q"></p>
+<p>Halimbawa ng cadence ng major release X:</p>
+<p><img decoding="async" loading="lazy" alt="Qiskit release schedule schema" src="/assets/images/release_schedule-1773ed2741facc7656f68e0351ed74ec.avif" width="1048" height="360" class="img_ev3q"></p>
 <p>Para sa isang napapanahong iskedyul ng release, sumangguni sa <a href="https://github.com/Qiskit/qiskit/milestones" target="_blank" rel="noopener noreferrer" class="">listahan ng milestones</a> ng GitHub project ng Qiskit, na palaging naglalaman ng kasalukuyang plano ng release.</p>
 <p>Sa paglabas ng isang bagong major na bersyon, ang nakaraang major na bersyon ay sinusuportahan
 ng hindi bababa sa anim na buwan na may mga bug fix lamang, at isang taon para sa mga security fix. Sa
@@ -85,11 +77,7 @@ bersyon. Kaunti bago ang isang bagong major na bersyon, isang panghuling minor n
 ilalathala. Ang panghuling minor na release ng bersyon na ito na <code>X.Y+1.0.0</code> ay katumbas ng
 <code>X.Y.0</code> ngunit may mga babala at deprecation para sa anumang pagbabago sa API na
 ginawa sa bagong major na bersyon series.</p>
-<p>Halimbawa, kaagad bago ang 1.0.0 release, isang 0.46.0 release ang
-ilalathala. Ang 0.46.0 release ay katumbas ng 0.45.0 release ngunit may
-karagdagang mga babala ng deprecation na nagdodokumento ng mga pagbabago sa API na ginawa bilang
-bahagi ng 1.0.0 release. Ang pattern na ito ay gagamitin para sa anumang mga release ng major na
-bersyon sa hinaharap.</p>
+<p>Halimbawa, kaagad bago ang 1.0.0 release, isang 0.46.0 release ay inilalathala. Ang 0.46.0 release ay katumbas ng 0.45.0 release ngunit may karagdagang mga babala ng deprecation na nagdodokumento ng mga pagbabago sa API na ginawa bilang bahagi ng 1.0.0 release. Ang pattern na ito ay nalalapat sa anumang mga release ng major na bersyon.</p>
 <p>Ang mga gumagamit ng Qiskit ay dapat munang mag-upgrade sa panghuling minor na
 bersyon na ito upang makita ang anumang mga babala ng deprecation at ayusin ang kanilang
 paggamit ng Qiskit bago subukan ang isang posibleng breaking release. Ang nakaraang
@@ -114,11 +102,7 @@ release. Tingnan ang karagdagang detalye sa <a href="https://github.com/Qiskit/R
 compatible sa <a href="https://peps.python.org/pep-0440/" target="_blank" rel="noopener noreferrer" class="">PEP440</a>. Karaniwang
 ang mga ito ay mga release candidate ng form na <code>X.Y.0rc1</code>. Ang mga <code>rc</code> release
 ay magkakaroon ng finalized na API surface at ginagamit upang subukan ang isang prospective na release.</p>
-<p>Tandaan na kapag ang isa sa mga PEP440 pre-release suffix (tulad ng <code>a</code>, <code>b</code>, o <code>pre</code>) ay
-inilathala, wala itong parehong mga garantiya ng isang <code>rc</code> release, at
-preview release lamang ito. Ang API ay maaaring magbago sa pagitan ng mga pre-release na ito
-at ng panghuling release na may numero ng bersyon na iyon. Halimbawa, ang <code>1.0.0pre1</code> ay maaaring may
-ibang panghuling API kaysa sa <code>1.0.0</code>.</p>
+<p>Tandaan na kapag ang isa sa mga PEP440 pre-release suffix (tulad ng <code>a</code>, <code>b</code>, o <code>pre</code>) ay inilathala, wala itong parehong mga garantiya ng isang <code>rc</code> release, at preview release lamang ito. Ang API ay maaaring magbago sa pagitan ng mga pre-release na ito at ng panghuling release na may numero ng bersyon na iyon. Halimbawa, ang <code>X.0.0pre1</code> ay maaaring may ibang API kaysa sa panghuling <code>X.0.0</code>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="post-releases">Mga post-release<a href="#post-releases" class="hash-link" aria-label="Direktang link sa Mga post-release" title="Direktang link sa Mga post-release" translate="no">​</a></h2>
 <p>Kung may mga isyu sa packaging ng isang release, isang post-release ay maaaring
 ilabas upang ayusin ito. Ang mga ito ay sumusunod sa form na <code>X.Y.Z.1</code> kung saan ang ikaapat na
