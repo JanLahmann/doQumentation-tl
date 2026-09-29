@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.cad9ab31.js" defer="defer"></script>
-<script src="/assets/js/main.42bc273a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ed064077.js" defer="defer"></script>
+<script src="/assets/js/main.9d4db7c6.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/migrate-to-noise-learner-v3" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/migrate-to-noise-learner-v3" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -30,7 +30,7 @@ output.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">Kaligiran<a href="#background" class="hash-link" aria-label="Direktang link sa Kaligiran" title="Direktang link sa Kaligiran" translate="no">​</a></h2>
 <p>Ang <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/noise-learner-noise-learner" target="_blank" rel="noopener noreferrer" class=""><code>NoiseLearner</code></a>
 class ay ginawa para payagan ang mga user na magsagawa ng explicit na noise learning. Ang resultang
-noise model ay maaari ring ipasa sa IBM Quantum <code>Estimator</code> para mag-apply ng mga error mitigation technique
+noise model ay maaari nang ipasa sa IBM Quantum <code>Estimator</code> para mag-apply ng mga error mitigation technique
 tulad ng PEA at PEC.</p>
 <p>Dinisenyo ang <code>NoiseLearner</code> para gumana kasama ang <code>Estimator</code>, kaya implicit nitong ginagamit ang parehong
 layer finding strategy ng <code>Estimator</code>. Hindi maaaring baguhin ang strategy na ito; kung hindi, ang mga
@@ -38,7 +38,7 @@ kasunod na hakbang sa mitigation ay hindi gagana nang tama.</p>
 <p>Simula sa <code>qiskit-ibm-runtime</code> v0.47.0, mayroon nang bagong
 <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/noise-learner-v3-noise-learner-v3" target="_blank" rel="noopener noreferrer" class=""><code>NoiseLearnerV3</code></a>
 class na compatible sa <code>Executor</code> primitive at sa
-<a class="" href="/guides/directed-execution-model">Modelo ng directed execution</a>.
+<a class="" href="/guides/directed-execution-model">modelo ng directed execution</a>.
 Nagbibigay ang bagong modelong ito ng <strong>white-box</strong> na karanasan sa pamamagitan ng pagbibigay ng mga piraso para makuha ang design intent
 sa client side, at isang solong server-side na primitive (Executor) ang nagpoproseso ng mga input na iyon nang eksakto ayon
 sa direksyon — hindi ito gumagawa ng anumang implicit na desisyon para sa iyo. Hindi tulad ng orihinal na <code>NoiseLearner</code>,
@@ -117,7 +117,7 @@ kung saan sila nanggaling. Naka-enable na ang PEA/PEC dito sa hakbang 2.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="references">Mga Sanggunian<a href="#references" class="hash-link" aria-label="Direktang link sa Mga Sanggunian" title="Direktang link sa Mga Sanggunian" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p><a class="" href="/guides/directed-execution-model">Modelo ng direktang pagpapatupad</a></p>
+<p><a class="" href="/guides/directed-execution-model">Modelo ng directed execution</a></p>
 </li>
 <li class="">
 <p><a class="" href="/guides/noise-learning">Helper para sa noise learning</a></p>
