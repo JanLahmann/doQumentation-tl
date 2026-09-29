@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.d62e6c94.js" defer="defer"></script>
-<script src="/assets/js/main.7786bbe8.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.d5c4cca1.js" defer="defer"></script>
+<script src="/assets/js/main.be4345c5.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/changelog-qiskit-functions" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/changelog-qiskit-functions" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,7 +29,7 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="july-2026">Hulyo 2026<a href="#july-2026" class="hash-link" aria-label="Direktang link sa Hulyo 2026" title="Direktang link sa Hulyo 2026" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>Mga bagong pre-flight check at bagong <code>backend</code> na mga method sa Qiskit Functions v0.17.0: Ang mga bagong method sa <code>qiskit-ibm-catalog</code> ay nagbibigay-daan sa iyo na tsekan ang runtime capacity at backend access bago tumakbo, at ngayon ay i-validate ng <code>run()</code> ang pareho bago mag-submit ng job.</p>
+<p>Mga bagong pre-flight check at bagong <code>backend</code> na mga method sa Qiskit Functions v0.17.0: Ang mga bagong method sa <code>qiskit-ibm-catalog</code> ay nagbibigay-daan sa iyo na tsekan ang runtime capacity at backend access bago tumakbo, at vina-validate na ngayon ng <code>run()</code> ang dalawang ito bago mag-submit ng job.</p>
 <ul>
 <li class="">
 <p><strong>Ano ang bago</strong></p>
@@ -137,7 +137,7 @@
 </ul>
 </li>
 <li class="">
-<p>Sa huli, matapos matapos ang isang Qiskit Function, maaari mong siyasatin kung gaano karaming oras ang nagugol sa bawat yugto gamit ang <code>job.result()[&#x27;metadata&#x27;][&#x27;resource_usage&#x27;]</code>, tulad ng sa sumusunod na halimbawa.</p>
+<p>Sa huli, kapag tapos na ang isang Qiskit Function, maaari mong siyasatin kung gaano karaming oras ang nagugol sa bawat yugto gamit ang <code>job.result()[&#x27;metadata&#x27;][&#x27;resource_usage&#x27;]</code>, tulad ng sa sumusunod na halimbawa.</p>
 </li>
 </ul>
 </li>
@@ -165,10 +165,10 @@
 <p>Ang preview ng Qiskit Functions Catalog ay nagbibigay ng access sa mga user ng Premium Plan upang tuklasin ang mga available na function, kabilang ang mga isinulat ng IBM at ng iba pang miyembro ng aming ecosystem. Ang catalog ay naglalaman ng dalawang uri ng function: circuit functions at application functions.</p>
 <ul>
 <li class="">
-<p><strong>Circuit functions</strong> ay nagbibigay ng pinasimpleng interface para sa pagpapatakbo ng mga circuit. Tinatanggap nila ang mga abstract circuit at observable na ibinigay ng user bilang input, pagkatapos ay pinamamahalaan ang synthesis, optimization, at execution ng representative na ISA circuit. Pinagsasama-sama ng circuit functions ang pinakabagong kakayahan sa transpilation, error suppression, at error mitigation upang gawing accessible ang utility-grade performance nang wala nang karagdagang gawin. Nagbibigay-daan ito sa mga computational scientist na tumuon sa pag-map ng kanilang mga problema sa mga circuit, sa halip na buuin ang pattern para sa bawat problema mula sa simula.</p>
+<p><strong>Circuit functions</strong> ay nagbibigay ng pinasimpleng interface para sa pagpapatakbo ng mga circuit. Tinatanggap nila ang mga abstract circuit at observable na ibinigay ng user bilang input, pagkatapos ay pinamamahalaan ang synthesis, optimization, at execution ng representative na ISA circuit. Pinagsasama-sama ng circuit functions ang pinakabagong kakayahan sa transpilation, error suppression, at error mitigation upang agad na magamit ang utility-grade performance nang walang dagdag na setup. Nagbibigay-daan ito sa mga computational scientist na tumuon sa pag-map ng kanilang mga problema sa mga circuit, sa halip na buuin ang pattern para sa bawat problema mula sa simula.</p>
 </li>
 <li class="">
-<p><strong>Application functions</strong> ay sumasaklaw sa mas mataas na antas na mga gawain, tulad ng pagtuklas ng mga algorithm at mga use case na partikular sa domain. Maaaring wala sa mga enterprise developer at data scientist ang background sa quantum information science para sa paggawa sa mga circuit, at sa halip ay inaasahan nilang idulot ang kanilang domain knowledge upang isulong ang mga algorithm at aplikasyon ng quantum computing. Sa application functions, maaaring magpasok ang mga user ng kanilang classical inputs at makatanggap ng mga solusyon upang mas madali silang makapag-eksperimento sa paggamit ng quantum sa kanilang mga workflow na partikular sa domain.</p>
+<p><strong>Application functions</strong> ay sumasaklaw sa mas mataas na antas na mga gawain, tulad ng pagtuklas ng mga algorithm at mga use case na partikular sa domain. Maaaring wala sa mga enterprise developer at data scientist ang background sa quantum information science para sa paggawa sa mga circuit, at sa halip ay nais nilang gamitin ang kanilang domain knowledge upang isulong ang mga algorithm at aplikasyon ng quantum computing. Sa application functions, maaaring magpasok ang mga user ng kanilang classical inputs at makatanggap ng mga solusyon upang mas madali silang makapag-eksperimento sa paggamit ng quantum sa kanilang mga workflow na partikular sa domain.</p>
 </li>
 </ul>
 </li>
