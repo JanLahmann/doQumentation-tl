@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.3243b86f.js" defer="defer"></script>
-<script src="/assets/js/main.16130682.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.b3f7e2f9.js" defer="defer"></script>
+<script src="/assets/js/main.2772aa1c.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -27,7 +27,7 @@
 Ang numero ng bersyon ay binubuo ng tatlong pangunahing bahagi: ang major, minor, at
 patch na bersyon. Halimbawa, sa numero ng bersyon na <code>X.Y.Z</code>, ang <code>X</code> ay ang major na bersyon,
 ang <code>Y</code> ay ang minor na bersyon, at ang <code>Z</code> ay ang patch na bersyon.</p>
-<p>Ang mga pagbabagong nakaka-apekto sa API ay nakalaan para sa mga major na release ng bersyon. Ang <strong>pinakamaikling</strong> panahon sa pagitan ng mga major na release ng bersyon ay isang taon. Ang mga minor na bersyon ay nagpapakilala ng mga bagong feature at bug fix nang hindi nasisira ang compatibility ng API, at pana-panahon (kasalukuyang, humigit-kumulang bawat tatlong buwan) ay inilalathala para <strong>lamang</strong> sa kasalukuyang major na bersyon. Ang mga patch na bersyon ay nagbibigay ng mga ayos para sa mga bug na natukoy sa pinakabagong minor na bersyon ng bawat aktibong sinusuportahang release series (iyon ay, ang major na bersyon). Sumusuporta kami ng hanggang dalawang release series sa isang pagkakataon, na nangyayari lamang sa panahon ng overlap kasunod ng isang bagong major na release ng bersyon, na inilarawan nang mas detalyado sa ibaba.</p>
+<p>Ang mga breaking na pagbabago sa API (na sumisira sa compatibility) ay nakalaan lamang para sa mga major na release ng bersyon. Ang <strong>pinakamaikling</strong> panahon sa pagitan ng mga major na release ng bersyon ay isang taon. Ang mga minor na bersyon ay nagpapakilala ng mga bagong feature at bug fix nang hindi nasisira ang compatibility ng API, at pana-panahon (kasalukuyang, humigit-kumulang bawat tatlong buwan) ay inilalathala para <strong>lamang</strong> sa kasalukuyang major na bersyon. Ang mga patch na bersyon ay nagbibigay ng mga ayos para sa mga bug na natukoy sa pinakabagong minor na bersyon ng bawat aktibong sinusuportahang release series (iyon ay, ang major na bersyon). Sumusuporta kami ng hanggang dalawang release series sa isang pagkakataon, na nangyayari lamang sa panahon ng overlap kasunod ng isang bagong major na release ng bersyon, na inilarawan nang mas detalyado sa ibaba.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="release-schedule">Iskedyul ng release<a href="#release-schedule" class="hash-link" aria-label="Direktang link sa Iskedyul ng release" title="Direktang link sa Iskedyul ng release" translate="no">​</a></h2>
 <p>Halimbawa ng cadence ng major release X:</p>
 <p><img decoding="async" loading="lazy" alt="Qiskit release schedule schema" src="/assets/images/release_schedule-1773ed2741facc7656f68e0351ed74ec.avif" width="1048" height="360" class="img_ev3q"></p>
@@ -40,7 +40,7 @@ ay nagdodokumento rin ng katapusan ng suporta para sa major na bersyon series na
 window ng suporta para sa nakaraang major na bersyon dahil nagbibigay ito sa mga downstream
 consumer ng Qiskit at sa kanilang mga gumagamit ng pagkakataon na i-migrate ang kanilang code.
 Ang mga downstream na library na
-umaasa sa Qiskit ay hindi dapat agad itaas ang kanilang minimum na kinakailangang bersyon ng Qiskit sa isang bagong
+umaasa sa Qiskit ay hindi dapat itaas ang kanilang minimum na kinakailangang bersyon ng Qiskit sa isang bagong
 major na bersyon kaagad pagkatapos ng release nito dahil kailangan ng oras ng user base ng library
 upang mag-migrate sa mga bagong pagbabago sa API. Ang pagkakaroon ng extended na window ng suporta
 para sa nakaraang major na bersyon ng Qiskit ay nagbibigay sa mga downstream na proyekto ng oras upang masiguro
@@ -66,13 +66,13 @@ garantiya ng backwards compatibility at maaaring magbago sa anumang release. Ang
 release ng bersyon lamang ang magtatataas ng mga minimum na kinakailangan para sa paggamit o pagbuo ng Qiskit
 (kasama ang pagdaragdag ng mga bagong dependency), ngunit ang mga patch fix ay maaaring magsama ng suporta para sa
 mga bagong bersyon ng Python o iba pang mga dependency. Karaniwang ang minimum na bersyon ng isang
-dependency ay tinatataas lamang kapag ang mga lumang bersyon ng dependency ay nag-expire na sa suporta o
+dependency ay tinatataas lamang kapag hindi na sinusuportahan ang mga lumang bersyon ng dependency o
 kapag hindi posible na mapanatili ang compatibility sa pinakabagong release ng
 dependency at ang mas lumang bersyon.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="upgrade-strategy">Estratehiya sa pag-upgrade<a href="#upgrade-strategy" class="hash-link" aria-label="Direktang link sa Estratehiya sa pag-upgrade" title="Direktang link sa Estratehiya sa pag-upgrade" translate="no">​</a></h2>
 <p>Kapag may bagong major na bersyon na inilabas, ang inirerekomendang landas ng upgrade
-ay ang una ay mag-upgrade sa pinakabagong minor na bersyon sa nakaraang major na
-bersyon. Kaunti bago ang isang bagong major na bersyon, isang panghuling minor na bersyon ang
+ay unahing mag-upgrade sa pinakabagong minor na bersyon sa nakaraang major na
+bersyon. Ilang sandali bago ang isang bagong major na bersyon, isang panghuling minor na bersyon ang
 ilalathala. Ang panghuling minor na release ng bersyon na ito na <code>X.Y+1.0.0</code> ay katumbas ng
 <code>X.Y.0</code> ngunit may mga babala at deprecation para sa anumang pagbabago sa API na
 ginawa sa bagong major na bersyon series.</p>
